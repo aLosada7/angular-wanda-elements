@@ -1,0 +1,10 @@
+<div class="toolbar-container">
+    <h4 class="toolbar-container__site-logo">Micro-Interations</h4>
+    <a (click)="toggleNavbar()" class="toolbar-container__site-logo__menu">
+        <span class="material-icons">
+            menu
+        </span>
+    </a>
+</div>
+
+<mcs-nav *ngIf="showNavbar" [sections]="sections"></mcs-nav>

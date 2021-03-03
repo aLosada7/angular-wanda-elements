@@ -1,0 +1,14 @@
+<nav role="navigation" class="nav" aria-label="Menu">
+    <div *ngFor="let section of sections" class="nav__section">
+        <h4>{{ section.name }}</h4>
+        <div class="section-container">
+            <div
+                *ngFor="let subsection of section.subsections"
+                class="nav__section__subsection"
+                [routerLink]="[section.name.toLowerCase(), subsection.id]"
+                [ngClass]="{'active-link': isActive(subsection.id)}">
+            <a><span>{{ subsection.name }}</span></a>
+        </div>
+        </div>
+    </div>
+</nav>

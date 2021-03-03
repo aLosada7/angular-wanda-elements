@@ -1,0 +1,32 @@
+@import '~src/variables';
+
+.toolbar-container {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: $secondary-color;
+
+    &__site-logo {
+
+        &__menu {
+            position: absolute;
+            right: 12px;
+            cursor: pointer;
+        }
+    }
+}
+
+.toolbar-navbar {
+
+    &__section {
+        color: $grey;
+        padding: 12px;
+
+        &__subsection {
+            margin-left: 16px;
+            padding: 8px;
+        }
+    }
+}

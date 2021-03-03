@@ -1,1 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~material-icons/iconfont/material-icons.css';
+@import '~src/variables';
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1;
+}
+
+html, body { height: 100%; }
+
+body {
+    margin: 0;
+    font-size: 16px;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    background-color: $grey;
+}
+
+a, button {
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+    border: 0;
+    background: transparent;
+}
+
+li {
+    list-style: none;
+}

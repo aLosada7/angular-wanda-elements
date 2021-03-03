@@ -1,0 +1,33 @@
+@import '~src/variables';
+
+.nav{
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    justify-content: center;
+
+    &__section {
+        color: $grey;
+        padding: 12px 12px 8px 12px;
+
+        .section-container {
+            margin-top: 8px;
+        }
+
+        &__subsection {
+            margin-left: 16px;
+            color: $secondary-color;
+            padding: 8px;
+            font-weight: 600;
+        }
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+.active-link {
+    background-color: $grey;
+    border-radius: 5px;
+}

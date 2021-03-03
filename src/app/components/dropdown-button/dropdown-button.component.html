@@ -1,0 +1,22 @@
+<div class="wrapper">
+    <div class="dropdown-button">
+        <button class="dropdown-button__button">
+            <span>Dropdown button</span>
+            <span class="material-icons-outlined" (click)="showDropdownItems = !showDropdownItems">keyboard_arrow_down</span>
+        </button>
+        <ul *ngIf="showDropdownItems" class="dropdown-button__items">
+            <li>
+                <span class="material-icons-outlined">accessibility_new</span>
+                <div>Profile</div>
+            </li>
+            <li>
+                <span class="material-icons-outlined">settings</span>
+                <div>Settings</div>
+            </li>
+            <li>
+                <span class="material-icons-outlined">mark_chat_unread</span>
+                <div>Chat</div>
+            </li>
+        </ul>
+    </div>
+</div>

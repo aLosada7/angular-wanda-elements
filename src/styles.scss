@@ -31,3 +31,7 @@ a, button {
 li {
     list-style: none;
 }
+
+*[ng-reflect-router-link]:focus {
+    outline: none;
+  }

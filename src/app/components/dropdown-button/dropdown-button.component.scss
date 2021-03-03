@@ -3,7 +3,7 @@
 
 .wrapper {
     position: relative;
-    width: 200px;
+    width: 250px;
     height: 56px;
 }
 
@@ -20,11 +20,16 @@
         justify-content: space-between;
         align-items: center;
         padding: 1rem 0;
+        font-weight: 600;
+        font-size: 1rem;
+        color: white;
+
+        div {
+            padding: 0 0.75rem 0 1rem;
+        }
 
         span {
             padding: 0 0.75rem 0 1rem;
-            font-weight: 600;
-            color: white;
         }
     }
 

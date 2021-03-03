@@ -7,10 +7,12 @@ import { PasswordInputComponent } from './components/password-input/password-inp
 import { SmallNotificationComponent } from './components/small-notification/small-notification.component';
 
 const routes: Routes = [
-    { path: "", redirectTo: 'notifications/small-notification', pathMatch: 'full' },
+    { path: "", redirectTo: 'inputs/password-input', pathMatch: 'full' },
+    { path: "inputs/password-input", component: PasswordInputComponent },
+
     { path: "notifications/small-notification", component: SmallNotificationComponent },
     { path: "notifications/large-notification", component: LargeNotificationComponent },
-    { path: "inputs/password-input", component: PasswordInputComponent },
+
     { path: "buttons/dropdown-button", component: DropdownButtonComponent }
 ];
 

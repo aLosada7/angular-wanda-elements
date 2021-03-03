@@ -1,5 +1,11 @@
 @import '~src/variables';
 
+@mixin toolbarIcons {
+    background-color: #202D34;
+    position: absolute;
+    cursor: pointer;
+}
+
 .toolbar-container {
     height: 50px;
     display: flex;
@@ -8,13 +14,15 @@
     position: relative;
     color: $secondary-color;
 
-    &__site-logo {
+    &__github-icon {
+        @include toolbarIcons();
+        left: 12px;
+        fill: $secondary-color;
+    }
 
-        &__menu {
-            position: absolute;
-            right: 12px;
-            cursor: pointer;
-        }
+    &__menu {
+        @include toolbarIcons();
+        right: 12px;
     }
 }
 

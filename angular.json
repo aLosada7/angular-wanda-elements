@@ -123,6 +123,14 @@
               "devServerTarget": "micro-interations:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@netlify-builder/deploy:deploy",
+          "options": {
+            "outputPath": "dist/micro-interations",
+            "netlifyToken": "7dVs0o3ATXUyCuXc_pEru3AgNhQ1-MfuZ4_tRl9nuZ8",
+            "siteId": "c8856ed8-36bd-4ef1-bd68-52ab693bf963"
+          }
         }
       }
     }

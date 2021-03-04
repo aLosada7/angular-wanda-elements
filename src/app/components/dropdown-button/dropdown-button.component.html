@@ -1,19 +1,19 @@
 <div class="wrapper">
     <div class="dropdown-button">
-        <button class="dropdown-button__button" (click)="showDropdownItems = !showDropdownItems">
+        <button class="dropdown-button__button" (click)="showDropdownItems = !showDropdownItems" [ngClass]="showDropdownItems ? 'dropdown-button__button__show' : ''">
             <div>Dropdown button</div>
             <span class="material-icons-outlined">keyboard_arrow_down</span>
         </button>
-        <ul *ngIf="showDropdownItems" class="dropdown-button__items">
-            <li>
+        <ul class="dropdown-button__items" [ngClass]="showDropdownItems ? 'dropdown-button__items__show' : ''">
+            <li (click)="handleSelection('profile')">
                 <span class="material-icons-outlined">accessibility_new</span>
                 <div>Profile</div>
             </li>
-            <li>
+            <li (click)="handleSelection('settings')">
                 <span class="material-icons-outlined">settings</span>
                 <div>Settings</div>
             </li>
-            <li>
+            <li (click)="handleSelection('chat')">
                 <span class="material-icons-outlined">mark_chat_unread</span>
                 <div>Chat</div>
             </li>

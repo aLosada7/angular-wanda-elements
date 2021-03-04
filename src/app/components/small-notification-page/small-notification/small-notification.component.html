@@ -1,0 +1,9 @@
+<div class="small-notification">
+    <div class="small-notification__content">
+        <span class="material-icons-outlined small-notification__content__icon" [ngClass]="success ? 'success' : 'failure'">
+            {{ success ? 'check' : 'error_outline' }}
+        </span>
+        <span class="small-notification__content__text">{{ text }}</span>
+    </div>
+    <button class="material-icons-outlined" (click)="dismiss()">close</button>
+</div>

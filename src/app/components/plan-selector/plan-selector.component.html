@@ -18,7 +18,7 @@
                 <strong>Unlimited</strong> public playlists
             </li>
         </ul>
-        <button class="choose-plan">Choose plan</button>
+        <button (click)="handleSelection('individual')" class="choose-plan">Choose plan</button>
     </div>
     <div class='package brilliant'>
         <span class="material-icons-outlined brilliant__verification-icon">done</span>
@@ -46,7 +46,7 @@
                 <span class="material-icons-outlined verification-icon">done</span> Send files
             </li>
         </ul>
-        <button class="choose-plan">Choose plan</button>
+        <button (click)="handleSelection('family')" class="choose-plan">Choose plan</button>
     </div>
     <div class='package'>
         <div class='name'>Student</div>
@@ -67,6 +67,6 @@
                 <strong>Unlimited</strong> public playlists
             </li>
         </ul>
-        <button class="choose-plan">Choose plan</button>
+        <button (click)="handleSelection('student')" class="choose-plan">Choose plan</button>
     </div>
 </div>

@@ -6,6 +6,7 @@
     font-weight: 400;
     color: #9f9f9f;
     font-size: 15px;
+    box-sizing: border-box;
 
     @media only screen and (max-width: $bp-large) {
         display: flex;

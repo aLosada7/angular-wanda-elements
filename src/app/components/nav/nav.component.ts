@@ -1,5 +1,5 @@
 import { Location } from '@angular/common';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'mcs-nav',
@@ -10,13 +10,15 @@ export class NavComponent implements OnInit {
 
     @Input() sections;
 
+    @Output() closeMenu = new EventEmitter();
+
     constructor(private location: Location) { }
 
     ngOnInit(): void {
     }
 
-      //active class
-      isActive(location: String) {
+    //active class
+    isActive(location: String) {
         return this.location.path().split("?")[0].split("/").some(element => element == location);
     }
 

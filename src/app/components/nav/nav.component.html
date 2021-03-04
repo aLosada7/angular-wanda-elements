@@ -6,6 +6,7 @@
                 *ngFor="let subsection of section.subsections"
                 class="nav__section__subsection"
                 [routerLink]="[section.name.toLowerCase(), subsection.id]"
+                (click)="closeMenu.emit()"
                 [ngClass]="{'active-link': isActive(subsection.id)}">
             <a><span>{{ subsection.name }}</span></a>
         </div>

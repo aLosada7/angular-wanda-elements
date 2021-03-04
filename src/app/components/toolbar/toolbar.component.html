@@ -10,4 +10,4 @@
     </a>
 </div>
 
-<mcs-nav *ngIf="showNavbar" [sections]="sections"></mcs-nav>
+<mcs-nav *ngIf="showNavbar" [sections]="sections" (closeMenu)="showNavbar = !showNavbar"></mcs-nav>

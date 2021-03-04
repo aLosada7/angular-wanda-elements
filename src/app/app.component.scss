@@ -5,6 +5,7 @@
     flex-direction: row;
     height: 100%;
     overflow-y: hidden;
+    box-sizing: border-box;
 
     &__left {
         height: 100vh;
@@ -55,7 +56,6 @@
             @media only screen and (max-width: $bp-tablet) {
               padding: 20px 10px !important;
               margin-top: 50px;
-              min-height: calc(100vh - 50px);
             }
           }
     }

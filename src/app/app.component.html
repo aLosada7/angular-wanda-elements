@@ -4,12 +4,12 @@
         <mcs-toolbar class="toolbar" [sections]="sections">toolbar</mcs-toolbar>
         <div class="layout-content">
             <router-outlet></router-outlet>
+            <mcs-small-notification
+                *ngIf="showNotification"
+                class="notification"
+                [success]="success"
+                [text]="text"
+                (onDismiss)="onDismiss()"></mcs-small-notification>
         </div>
-        <mcs-small-notification
-            *ngIf="showNotification"
-            class="notification"
-            [success]="success"
-            [text]="text"
-            (onDismiss)="onDismiss()"></mcs-small-notification>
     </div>
 </div>

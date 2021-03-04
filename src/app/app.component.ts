@@ -1,7 +1,7 @@
 import { SharedService } from './shared.service';
-import { Component, ElementRef, ViewChild, OnInit, OnDestroy } from '@angular/core';
+import { Component, ViewChild, OnInit, OnDestroy } from '@angular/core';
 import { interval, Observable, Subscription } from 'rxjs';
-import { switchMap, take, tap } from 'rxjs/operators';
+import { switchMap, tap } from 'rxjs/operators';
 import { SmallNotificationComponent } from './components/small-notification-page/small-notification/small-notification.component';
 export interface Section {
     name: string,
@@ -44,6 +44,12 @@ export class AppComponent implements OnInit, OnDestroy{
             name: "Buttons",
             subsections: [
                 { id: "dropdown-button", name: "Dropdown Button" }
+            ]
+        },
+        {
+            name: "Selectors",
+            subsections: [
+                { id: "plan-selector", name: "Price Plan Selector" }
             ]
         }
     ];

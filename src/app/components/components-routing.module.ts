@@ -1,3 +1,4 @@
+import { PlanSelectorComponent } from './plan-selector/plan-selector.component';
 import { DropdownButtonComponent } from './dropdown-button/dropdown-button.component';
 import { LargeNotificationComponent } from './large-notification/large-notification.component';
 import { NgModule } from '@angular/core';
@@ -13,7 +14,9 @@ const routes: Routes = [
     { path: "notifications/small-notification", component: SmallNotificationPageComponent },
     { path: "notifications/large-notification", component: LargeNotificationComponent },
 
-    { path: "buttons/dropdown-button", component: DropdownButtonComponent }
+    { path: "buttons/dropdown-button", component: DropdownButtonComponent },
+
+    { path: "selectors/plan-selector", component: PlanSelectorComponent }
 ];
 
 @NgModule({

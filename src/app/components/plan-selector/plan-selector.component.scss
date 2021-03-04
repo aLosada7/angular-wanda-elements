@@ -1,0 +1,156 @@
+@import '~src/variables';
+
+.plan-selector {
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    color: #9f9f9f;
+    font-size: 15px;
+
+    @media only screen and (max-width: $bp-large) {
+        display: flex;
+        flex-direction: column;
+    }
+
+    @media only screen and (max-width: $bp-tablet) {
+        justify-content: space-around;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .brilliant {
+            order: 1;
+        }
+    }
+
+    @media only screen and (max-width: $bp-phone) {
+        .brilliant {
+            order: -1;
+        }
+    }
+
+}
+
+.package {
+    background: white;
+    box-sizing: border-box;
+    width: 301px;
+    height: 420px;
+    border: 3px solid $primary-color;
+    display: inline-block;
+    border-radius: 7px;
+    padding: 24px;
+    text-align: center;
+    float: left;
+    position: relative;
+    margin-right: 11px;
+
+    @media only screen and (max-width: $bp-large) {
+        margin: 1rem 0;
+    }
+
+    &:hover {
+        margin-top: -30px;
+        transition: margin-top .3s linear;
+    }
+}
+
+.name {
+    color: #565656;
+    font-weight: 300;
+    font-size: 3rem;
+    margin-top: -5px;
+}
+
+.price {
+    margin-top: 7px;
+    font-weight: bold;
+
+    &::after {
+        content: " / month per user";
+        font-weight: normal;
+    }
+}
+
+hr {
+    background-color: #dedede;
+    border: none;
+    height: 1px;
+}
+
+.trial {
+    font-size: .9rem;
+    font-weight: 600;
+    padding: 2px 21px 2px 21px;
+    color: $primary-color;
+    border: 1px solid #e4e4e4;
+    display: inline-block;
+    border-radius: 15px;
+    background-color: white;
+    position: relative;
+    bottom: -30px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    margin-top: 42px;
+    height: 200px;
+}
+
+li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+
+    .verification-icon {
+        font-size: 1.3rem;
+        color: $primary-color;
+        margin-right: 3px;
+    }
+
+    strong {
+        margin-right: 4px;
+    }
+}
+
+.brilliant {
+    border-color: $primary-color;
+    transform: translateY(-10px);
+
+    @media only screen and (max-width: $bp-tablet) {
+        transform: none;
+    }
+
+    &::before {
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 64px 64px 0 0;
+        border-color: $primary-color transparent transparent transparent;
+        position: absolute;
+        left: -1px;
+        top: -1px;
+        content: "";
+    }
+
+    &__verification-icon {
+        color: white;
+        position: absolute;
+        left: 9px;
+        top: 6px;
+        text-shadow: 0 0 2px #37c5b6;
+        font-size: 1.4rem;
+    }
+}
+
+.choose-plan {
+    background-color: $primary-color;
+    padding: 1rem;
+    color: white;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+}

@@ -1,4 +1,4 @@
-# MicroInterations
+# wanda-elements
 
 This repository offers different micro-interactions that will help get you rocking and rolling on your next project.
 

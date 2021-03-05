@@ -9,6 +9,7 @@
     padding: 0;
     box-sizing: border-box;
     line-height: 1;
+    scroll-behavior: smooth;
 }
 
 html, body { height: 100%; }
@@ -26,6 +27,7 @@ a, button {
     text-decoration: none;
     border: 0;
     background: transparent;
+    color: rgba(255, 255, 255, 0.75);
 }
 
 li {

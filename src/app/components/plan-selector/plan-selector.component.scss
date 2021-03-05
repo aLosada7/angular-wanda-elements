@@ -10,10 +10,6 @@
 
     @media only screen and (max-width: $bp-large) {
         display: flex;
-        flex-direction: column;
-    }
-
-    @media only screen and (max-width: $bp-tablet) {
         justify-content: space-around;
         flex-direction: row;
         flex-wrap: wrap;
@@ -46,7 +42,7 @@
     margin-right: 11px;
 
     @media only screen and (max-width: $bp-large) {
-        margin: 1rem 0;
+        margin: 1rem 0.5rem;
 
         &:hover {
             transition: none !important;

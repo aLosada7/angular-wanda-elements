@@ -7,6 +7,7 @@ import { LargeNotificationComponent } from './large-notification/large-notificat
 import { DropdownButtonComponent } from './dropdown-button/dropdown-button.component';
 import { SharedModule } from '../shared.module';
 import { PlanSelectorComponent } from './plan-selector/plan-selector.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { PlanSelectorComponent } from './plan-selector/plan-selector.component';
     PasswordInputComponent,
     LargeNotificationComponent,
     DropdownButtonComponent,
-    PlanSelectorComponent
+    PlanSelectorComponent,
+    HomeComponent
   ],
   imports: [
     SharedModule,

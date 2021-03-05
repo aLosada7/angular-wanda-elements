@@ -1,7 +1,8 @@
+@import '~src/styles';
 @import '~src/variables';
 
 @mixin toolbarIcons {
-    background-color: #202D34;
+    background-color: $black;
     position: absolute;
     cursor: pointer;
 }
@@ -12,7 +13,6 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    color: $secondary-color;
 
     &__github-icon {
         @include toolbarIcons();

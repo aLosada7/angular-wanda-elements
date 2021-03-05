@@ -6,9 +6,12 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { PasswordInputComponent } from './password-input/password-input.component';
 import { SmallNotificationPageComponent } from './small-notification-page/small-notification-page.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
-    { path: "", redirectTo: 'inputs/password-input', pathMatch: 'full' },
+    { path: "", redirectTo: 'home', pathMatch: 'full' },
+    { path: "home", component: HomeComponent },
+
     { path: "inputs/password-input", component: PasswordInputComponent },
 
     { path: "notifications/small-notification", component: SmallNotificationPageComponent },

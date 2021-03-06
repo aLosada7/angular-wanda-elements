@@ -43,7 +43,8 @@ export class AppComponent implements OnInit, OnDestroy{
         {
             name: "Buttons",
             subsections: [
-                { id: "dropdown-button", name: "Dropdown Button" }
+                { id: "dropdown-button", name: "Dropdown Button" },
+                { id: "hamburguer-button", name: "Menu Button" }
             ]
         },
         {

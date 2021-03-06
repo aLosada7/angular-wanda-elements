@@ -1,3 +1,4 @@
+import { HamburguerButtonComponent } from './hamburguer-button/hamburguer-button.component';
 import { PlanSelectorComponent } from './plan-selector/plan-selector.component';
 import { DropdownButtonComponent } from './dropdown-button/dropdown-button.component';
 import { LargeNotificationComponent } from './large-notification/large-notification.component';
@@ -18,6 +19,7 @@ const routes: Routes = [
     { path: "notifications/large-notification", component: LargeNotificationComponent },
 
     { path: "buttons/dropdown-button", component: DropdownButtonComponent },
+    { path: "buttons/hamburguer-button", component: HamburguerButtonComponent },
 
     { path: "selectors/plan-selector", component: PlanSelectorComponent }
 ];

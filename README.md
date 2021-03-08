@@ -6,6 +6,8 @@ They have been implemented as different Angular components, but they are mainly 
 
 *IMPORTANT:* Every micro-interaction has its own component, with its own HTML and CSS.
 
+Check it out: [wanda-elements](https://wanda-elements.netlify.app/home)
+
 ## Contributions
 
 Hi you, developer. This project is open to new contributions. Don't hesitate to contact me if you have any idea or want to participe!

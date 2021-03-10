@@ -1,0 +1,79 @@
+@import '~src/styles';
+@import '~src/variables';
+
+.wrapper {
+    position: relative;
+    width: 250px;
+    height: 56px;
+}
+
+.country-selector {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+
+    &__button {
+        position: relative;
+        background: white;
+        border-radius: 0.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 2px solid $primary-color;
+        height: 56px;
+        width: 100%;
+        display: flex;
+        color: $primary-color;
+
+        &__show {
+            border-radius: 10px 10px 0 0;
+        }
+
+        div {
+            padding: 0 0.75rem 0 1rem;
+        }
+
+        span {
+            padding: 0 0.75rem 0 1rem;
+            font-weight: 700;
+        }
+    }
+
+    &__items {
+        background: $primary-color;
+        color: white;
+        padding: 0 0.5rem 0.5rem;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity .3s;
+        border-radius: 0 0 10px 10px;
+        max-height: 150px;
+        overflow-y: scroll;
+
+        &__show {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        li {
+            padding: 100px;
+            height: 40px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 0 0.5rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            font-weight: 600;
+
+            span {
+                padding: 0 0.75rem 0 1rem;
+            }
+        }
+    }
+}
+
+.country-flag {
+    width: 20px;
+    height: 15px;
+}

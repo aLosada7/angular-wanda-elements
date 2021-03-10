@@ -9,6 +9,7 @@ import { SharedModule } from '../shared.module';
 import { PlanSelectorComponent } from './plan-selector/plan-selector.component';
 import { HomeComponent } from './home/home.component';
 import { HamburguerButtonComponent } from './hamburguer-button/hamburguer-button.component';
+import { CountrySelectorComponent } from './country-selector/country-selector.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HamburguerButtonComponent } from './hamburguer-button/hamburguer-button
     DropdownButtonComponent,
     PlanSelectorComponent,
     HomeComponent,
-    HamburguerButtonComponent
+    HamburguerButtonComponent,
+    CountrySelectorComponent
   ],
   imports: [
     SharedModule,

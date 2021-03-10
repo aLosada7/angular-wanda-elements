@@ -1,0 +1,13 @@
+<div class="wrapper">
+    <div class="country-selector">
+        <button class="country-selector__button" (click)="showDropdownItems = !showDropdownItems" [ngClass]="showDropdownItems ? 'country-selector__button__show' : ''">
+            <div><img src={{countrySelected.flag}} class="country-flag"/><span>{{countrySelected.name}}</span></div>
+            <span class="material-icons-outlined">keyboard_arrow_down</span>
+        </button>
+        <ul class="country-selector__items" [ngClass]="showDropdownItems ? 'country-selector__items__show' : ''">
+            <li *ngFor="let country of countries" (click)="handleSelection(country)">
+                <img src={{country.flag}} class="country-flag"/><span>{{country.name}}</span>
+            </li>
+        </ul>
+    </div>
+</div>

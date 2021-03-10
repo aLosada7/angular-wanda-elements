@@ -8,6 +8,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { PasswordInputComponent } from './password-input/password-input.component';
 import { SmallNotificationPageComponent } from './small-notification-page/small-notification-page.component';
 import { HomeComponent } from './home/home.component';
+import { CountrySelectorComponent } from './country-selector/country-selector.component';
 
 const routes: Routes = [
     { path: "", redirectTo: 'home', pathMatch: 'full' },
@@ -21,7 +22,8 @@ const routes: Routes = [
     { path: "buttons/dropdown-button", component: DropdownButtonComponent },
     { path: "buttons/hamburguer-button", component: HamburguerButtonComponent },
 
-    { path: "selectors/plan-selector", component: PlanSelectorComponent }
+    { path: "selectors/plan-selector", component: PlanSelectorComponent },
+    { path: "selectors/country-selector", component: CountrySelectorComponent }
 ];
 
 @NgModule({

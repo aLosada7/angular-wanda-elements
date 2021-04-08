@@ -53,6 +53,12 @@ export class AppComponent implements OnInit, OnDestroy{
                 { id: "plan-selector", name: "Price Plan Selector" },
                 { id: "country-selector", name: "Country Selector" }
             ]
+        },
+        {
+            name: "Forms",
+            subsections: [
+                { id: "credit-card", name: "Credit Card Form" },
+            ]
         }
     ];
     showNotification: boolean = false;

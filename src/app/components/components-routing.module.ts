@@ -9,6 +9,7 @@ import { PasswordInputComponent } from './password-input/password-input.componen
 import { SmallNotificationPageComponent } from './small-notification-page/small-notification-page.component';
 import { HomeComponent } from './home/home.component';
 import { CountrySelectorComponent } from './country-selector/country-selector.component';
+import { CreditCardFormComponent } from './credit-card-form/credit-card-form.component';
 
 const routes: Routes = [
     { path: "", redirectTo: 'home', pathMatch: 'full' },
@@ -23,7 +24,9 @@ const routes: Routes = [
     { path: "buttons/hamburguer-button", component: HamburguerButtonComponent },
 
     { path: "selectors/plan-selector", component: PlanSelectorComponent },
-    { path: "selectors/country-selector", component: CountrySelectorComponent }
+    { path: "selectors/country-selector", component: CountrySelectorComponent },
+
+    { path: "forms/credit-card", component: CreditCardFormComponent }
 ];
 
 @NgModule({

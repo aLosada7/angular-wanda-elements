@@ -1,0 +1,89 @@
+<div class="wrapper">
+    <div class="credit-card">
+        <div class="credit-card__title">
+            <h3 class="title">Add a payment method</h3>
+        </div>
+        <div class="credit-card__divider"></div>
+        <form class="credit-card__body" novalidate [formGroup]="creditCardForm">
+            <div class="form-container">
+                <fieldset>
+                    <div class="field">
+                        <input type="text" (focus)="onCVVBlur()" class="form-control" placeholder="Credit card number" formControlName="number" maxlength={{CREDIT_CARD_NUMBER_LENGTH}}>
+                    </div>
+                    <div class="field">
+                        <input type="text" (focus)="onCVVBlur()" class="form-control" placeholder="Name on card" formControlName="name" maxlength={{CARD_NAME_MAX_LENGTH}}>
+                    </div>
+                    <div class="field-2">
+                        <input type="text" (focus)="onCVVBlur()" class="form-control" placeholder="MM/YY" formControlName="expirationDate" maxlength={{EXPIRATION_DATE_LENGTH}}>
+                    </div>
+                    <div class="field-2">
+                        <input type="text" (focus)="onCVVFocus()" class="form-control" placeholder="CVV" formControlName="cvv" maxlength={{CVV_LENGTH}}>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="preview-container">
+                <div id="card" class="preview" #previewCard>
+                    <div class="card-face-front">
+                        <span class="material-icons-outlined">
+                            developer_board
+                        </span>
+                        <div class="card-face-front__image">
+                            <img src="https://brand.mastercard.com/content/dam/mccom/brandcenter/thumbnails/mastercard_vrt_rev_92px_2x.png" width=65>
+                        </div>
+                        <div class="card-header card-number">
+                            <ng-container *ngFor="let number of creditCardForm.value['number'].split(''); let i=index;">
+                                <span class="number" [ngClass]="{'separation': (i+1) % 4 === 0}">{{ number }}</span>
+                            </ng-container>
+                            <ng-container *ngFor="let key of counter(remainingCardNumbers); let i=index;">
+                                <span class="dot" [ngClass]="{'separation': ((CREDIT_CARD_NUMBER_LENGTH - remainingCardNumbers) + i + 1) % 4 === 0}"></span>
+                            </ng-container>
+                        </div>
+                        <div class="card-bottom">
+                            <div class="card-name">
+                                {{ creditCardForm.value['name'] | defaultValuePipe: 'Full Name' | uppercase }}
+                            </div>
+                            <div class="card-expiration-date">
+                                <div class="card-expiration-date__month">
+                                    <ng-container *ngIf="remainingExpirationDateNumbers < 5 else dot">
+                                        <span>{{ creditCardForm.value['expirationDate'][0] }}</span>
+                                    </ng-container>
+
+                                    <ng-container *ngIf="remainingExpirationDateNumbers < 4 else dot">
+                                        <span>{{ creditCardForm.value['expirationDate'][1] }}</span>
+                                    </ng-container>
+                                </div>
+                                <span class="card-expiration-date__backslash">/</span>
+                                <div class="card-expiration-date__year">
+                                    <ng-container *ngIf="remainingExpirationDateNumbers < 2 else dot">
+                                        <span>{{ creditCardForm.value['expirationDate'][3] }}</span>
+                                    </ng-container>
+                                    <ng-container *ngIf="remainingExpirationDateNumbers < 1 else dot">
+                                        <span>{{ creditCardForm.value['expirationDate'][4] }}</span>
+                                    </ng-container>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-face-back">
+                        <div class="headband"></div>
+                        <div class="card-cvv">
+                            <span class="label-cvv">CVV</span>
+                            <div>
+                                <ng-container *ngFor="let number of creditCardForm.value['cvv'].split(''); let i=index;">
+                                    <span class="number" [ngClass]="{'separation': (i+1) % 4 === 0}">{{ number }}</span>
+                                </ng-container>
+                                <ng-container *ngFor="let key of counter(remainingCVVNumbers); let i=index;">
+                                    <span class="dot" [ngClass]="{'separation': ((CVV_LENGTH - remainingCVVNumbers) + i + 1) % 4 === 0}"></span>
+                                </ng-container>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<ng-template #dot>
+    <span class="dot"></span>
+</ng-template>

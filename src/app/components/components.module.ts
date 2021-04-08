@@ -10,6 +10,8 @@ import { PlanSelectorComponent } from './plan-selector/plan-selector.component';
 import { HomeComponent } from './home/home.component';
 import { HamburguerButtonComponent } from './hamburguer-button/hamburguer-button.component';
 import { CountrySelectorComponent } from './country-selector/country-selector.component';
+import { CreditCardFormComponent } from './credit-card-form/credit-card-form.component';
+import { DefaultValuePipe } from './default-value.pipe';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { CountrySelectorComponent } from './country-selector/country-selector.co
     PlanSelectorComponent,
     HomeComponent,
     HamburguerButtonComponent,
-    CountrySelectorComponent
+    CountrySelectorComponent,
+    CreditCardFormComponent,
+    DefaultValuePipe
   ],
   imports: [
     SharedModule,

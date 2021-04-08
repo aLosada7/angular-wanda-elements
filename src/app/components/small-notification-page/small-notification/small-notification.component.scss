@@ -1,5 +1,3 @@
-@import '~src/variables';
-
 .small-notification {
     box-shadow: rgb(0 0 0 / 11%) 0 0 0 1px, rgb(0 0 0 / 5%) 0 10px 10px -5px;
     background: white;
@@ -15,7 +13,7 @@
     align-items: center;
     margin: 16px 0;
 
-    @media only screen and (max-width: $bp-phone) {
+    @media only screen and (max-width: 480px) {
         min-width: fit-content;
         width: 100%;
     }
@@ -43,10 +41,10 @@
 }
 
 .success {
-    color: $green;
+    color: #0DBF9B;
 }
 
 .failure {
-    color: $red;
+    color: #F43E5C;
 }
 

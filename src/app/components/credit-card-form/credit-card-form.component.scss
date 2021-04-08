@@ -1,0 +1,200 @@
+@import '~src/variables';
+
+.wrapper {
+    position: relative;
+}
+
+.credit-card {
+    max-width: 800px;
+    height: fit-content;
+    background: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+        padding: 2rem;
+
+        .title {
+            letter-spacing: 0.8px;
+        }
+    }
+
+    &__divider {
+        background-color: rgba(0,0,0, 0.3);
+        width: 90%;
+        height: 1px;
+        display: flex;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    &__body {
+        display: grid;
+        padding: 1rem;
+        grid-template-columns: 1fr 1fr;
+
+        @media only screen and (max-width: $bp-large) {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-control {
+            border-radius: 10px;
+            border: 1px solid rgba(0,0,0, 0.3);
+            outline: 0;
+        }
+
+        .form-control:focus {
+            border: 1px solid #485963;
+          }
+
+        .preview-container {
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
+
+            @media only screen and (max-width: $bp-large) {
+                order: -1;
+            }
+
+            .preview {
+                background: #4ca1af; /* fallback for old browsers */
+                background: -webkit-linear-gradient(to right, #4ca1af, #c4e0e5); /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to right, #4ca1af, #c4e0e5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                width: 390px;
+                height: 260px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 1rem;
+                border-radius: 10px;
+                color: rgba(255,255,255,0.75);
+                position: relative;
+
+                transform-style: preserve-3d;
+                transform-origin: center right;
+                transition: transform 1s;
+
+                .card-face-front {
+                    display: flex;
+                    flex-direction: column;
+                    backface-visibility: hidden;
+                    margin: 0;
+                    padding: 0;
+                    width: 90%;
+                    margin-top: 3.5rem;
+                    position: absolute;
+
+                    &__image {
+                        position: fixed;
+                        top: 0;
+                        right: 0;
+                        margin-top: 1rem;
+                        margin-right: 1rem;
+                        backface-visibility: hidden;
+                    }
+
+                    .card-header {
+                        padding: 1rem 0;
+                        margin-bottom: 0.5rem;
+                    }
+
+                    .card-bottom {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        padding: 1rem 0;
+
+                        .card-expiration-date {
+                            display: flex;
+                            flex-direction: row;
+                            font-size: 0.8rem;
+
+                            &__month, &__year {
+                                margin: auto 0;
+                            }
+
+                            &__backslash {
+                                font-size: 1rem;
+                                padding: 0 0.5rem;
+                            }
+                        }
+                    }
+                }
+
+                .card-face-back {
+                    backface-visibility: hidden;
+                    transform: rotateY(180deg);
+                    width: 100%;
+
+                    .headband {
+                        height: 30px;
+                        background-color: white;
+                        margin-bottom: 0.5rem;
+                    }
+
+                    .card-cvv {
+                        display: flex;
+                        flex-direction: column;
+                        padding: 1rem;
+
+                        .label-cvv {
+                            margin-bottom: 0.5rem;
+                        }
+                    }
+                }
+            }
+
+            .is-flipped {
+                transform: translateX(-100%) rotateY(-180deg);
+            }
+        }
+    }
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    fieldset {
+        display: flex;
+        flex: 0 1 auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+        border: none;
+
+        * {
+            padding: 12px;
+        }
+    }
+
+    .field {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+
+    .field-2 {
+        flex-basis: 50%;
+        max-width: 50%;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 0.5rem;
+    }
+}
+
+.dot {
+    height: 8px;
+    width: 8px;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 2px;
+}
+
+.separation {
+    margin-right: 10px;
+}

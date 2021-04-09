@@ -63,7 +63,7 @@
                 background: -webkit-linear-gradient(to right, #4ca1af, #c4e0e5); /* Chrome 10-25, Safari 5.1-6 */
                 background: linear-gradient(to right, #4ca1af, #c4e0e5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
                 width: 390px;
-                height: 260px;
+                height: 240px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -76,7 +76,7 @@
                 transform-origin: center right;
                 transition: transform 1s;
 
-                @media only screen and (max-width: $bp-mobile) {
+                @media only screen and (max-width: $bp-phone) {
                     width: 100%;
                     height: 200px;
                 }
@@ -91,6 +91,10 @@
                     margin-top: 3.5rem;
                     position: absolute;
 
+                    .chip {
+                        font-size: 42px;
+                    }
+
                     &__image {
                         position: fixed;
                         top: 0;
@@ -98,10 +102,10 @@
                         margin-top: 1rem;
                         margin-right: 1rem;
                         backface-visibility: hidden;
+                    }
 
-                        .chip {
-                            font-size: 42px;
-                        }
+                    .card-name {
+                        padding: 4px;
                     }
 
                     .card-header {
@@ -123,6 +127,7 @@
 
                             &__month, &__year {
                                 margin: auto 0;
+                                display: flex;
                             }
 
                             &__backslash {

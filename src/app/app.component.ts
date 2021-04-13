@@ -51,7 +51,9 @@ export class AppComponent implements OnInit, OnDestroy{
             name: "Selectors",
             subsections: [
                 { id: "plan-selector", name: "Price Plan Selector" },
-                { id: "country-selector", name: "Country Selector" }
+                { id: "country-selector", name: "Country Selector" },
+                { id: "price-range-selector", name: "Price Range Selector" },
+                { id: "fixed-price-range-selector", name: "Fixed Price Range Selector" }
             ]
         },
         {

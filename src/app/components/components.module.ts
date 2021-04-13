@@ -12,6 +12,10 @@ import { HamburguerButtonComponent } from './hamburguer-button/hamburguer-button
 import { CountrySelectorComponent } from './country-selector/country-selector.component';
 import { CreditCardFormComponent } from './credit-card-form/credit-card-form.component';
 import { DefaultValuePipe } from './default-value.pipe';
+import { PriceRangeSelectorComponent } from './price-range-selector/price-range-selector.component';
+import { FixedPriceRangeSelectorComponent } from './fixed-price-range-selector/fixed-price-range-selector.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -24,11 +28,16 @@ import { DefaultValuePipe } from './default-value.pipe';
     HamburguerButtonComponent,
     CountrySelectorComponent,
     CreditCardFormComponent,
-    DefaultValuePipe
+    DefaultValuePipe,
+    PriceRangeSelectorComponent,
+    FixedPriceRangeSelectorComponent
   ],
   imports: [
     SharedModule,
-    ComponentsRoutingModule
+    ComponentsRoutingModule,
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [ComponentsModule]

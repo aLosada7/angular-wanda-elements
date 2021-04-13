@@ -1,0 +1,8 @@
+<ng-container *ngIf="rangeValues">
+    <mcs-range
+        name="range"
+        [min]="defaultMinMaxRangeValues.min"
+        [max]="defaultMinMaxRangeValues.max"
+        [(ngModel)]="rangeValues"
+        (rangeChange)="onRangeChange($event)"></mcs-range>
+</ng-container>
